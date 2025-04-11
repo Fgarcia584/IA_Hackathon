@@ -64,15 +64,6 @@ document.addEventListener('DOMContentLoaded', function () {
             hint: "Cherchez les sources de consommations electriques"
         },
         {
-            title: "Chambre",
-            image: "https://cdn.discordapp.com/attachments/1300375543056961537/1360218105430806538/Design_sans_titre_1.png?ex=67fa5153&is=67f8ffd3&hm=aa7fe5c0ae9300742ea16d3e4ce3ed02b4eb2f6bef0f2fd8c1b6ad395fbe8fc7&",
-            targets: [
-                { x: 56, y: 17, name: "Lumière allumée", energy: 25, tooltipPos: "right" },
-                { x: 84, y: 53, name: "Réveil", energy: 30, tooltipPos: "left" },
-            ],
-            hint: "Cherchez les sources de consommations electriques"
-        },
-        {
             title: "Salon",
             image: "https://cdn.discordapp.com/attachments/1300375543056961537/1360206738053140570/raw.png?ex=67fa46bd&is=67f8f53d&hm=8a4a2fd61a86d994ed0b39705c6217e63fee57c80f3154384b803c5af33c448b&",
             targets: [
