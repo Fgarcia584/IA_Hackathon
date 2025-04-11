@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const finalEnergy = document.getElementById('final-energy');
     const finalMoney = document.getElementById('final-money');
     const hint = document.getElementById('hint');
+    const audioPlayer = document.getElementById('audio-player');
 
     // Variables du jeu
     let currentLevel = 1;
@@ -300,6 +301,12 @@ document.addEventListener('DOMContentLoaded', function () {
         finalEnergy.textContent = totalEnergySaved;
         finalMoney.textContent = Math.round(totalEnergySaved * 0.15);
         congratsModal.classList.remove('hidden');
+
+        audioPlayer.pause();
+        
+
+        const audio = new Audio("../audio/watts_fantomes.mp3");
+        audio.play();
     }
 
     // Événements

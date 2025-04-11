@@ -18,6 +18,9 @@
                         class="w-16 h-16"> La chasse aux watts fantômes
                 </h1>
                 <div class="flex items-center space-x-4">
+                    <audio controls loop controlslist="nodownload noplaybackrate" id="audio-player">
+                        <source src="./audio/Lofi.mp3" type="audio/mp3">
+                      </audio>
                     <div class="bg-green-700 px-3 py-1 rounded-full flex items-center">
                         <i class="fas fa-bolt mr-1"></i>
                         <span id="score">0</span> / <span id="total-targets">0</span>
@@ -51,7 +54,7 @@
                         <div class="text-center bg-white bg-opacity-90 p-8 rounded-lg shadow-xl max-w-md">
                             <h2 class="text-2xl font-bold text-green-700 mb-4">La chasse aux watts fantômes</h2>
                             <p class="mb-6 text-gray-700">
-                                Trouvez et éteignez tous les appareils qui consomment de l'énergie inutilement dans
+                                Trouvez et éteignez tous les appareils qui consomment de l'énergie passivement dans
                                 chaque pièce.
                                 Les zones à trouver sont invisibles - cliquez sur les appareils suspects pour les
                                 découvrir!
@@ -139,7 +142,7 @@
         </footer>
 
         <!-- Modal d'aide -->
-        <div id="help-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div id="help-modal" class="fixed inset-0 flex bg-black/20 backdrop-blur-sm items-center justify-center z-50 hidden">
             <div class="bg-white rounded-lg shadow-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
                 <div class="p-6">
                     <div class="flex justify-between items-center mb-4">
@@ -150,14 +153,14 @@
                     </div>
 
                     <div class="space-y-4">
-                        <div class="flex items-start">
-                            <div class="bg-green-100 p-2 rounded-full mr-4">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-green-100 p-2 rounded-full">
                                 <i class="fas fa-search text-green-600"></i>
                             </div>
                             <div>
                                 <h4 class="font-semibold">Trouvez les consommateurs d'énergie</h4>
                                 <p class="text-gray-600">Parcourez l'image et cliquez sur les appareils qui consomment
-                                    de l'énergie inutilement (veille, chargeurs branchés, etc.)</p>
+                                    de l'énergie passivement (veille, chargeurs branchés, etc.)</p>
                             </div>
                         </div>
 
@@ -167,8 +170,8 @@
                             </div>
                             <div>
                                 <h4 class="font-semibold">Éteignez-les</h4>
-                                <p class="text-gray-600">En cliquant sur un appareil énergivore, vous le "débranchez"
-                                    symboliquement et gagnez des points</p>
+                                <p class="text-gray-600">En cliquant sur un appareil énergivore, vous découvrez sa consommation annuelle
+                                    et gagnez des points</p>
                             </div>
                         </div>
 
