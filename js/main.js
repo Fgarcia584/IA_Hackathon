@@ -226,7 +226,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Créer des confettis
     function createConfetti(x, y) {
-        console.log('Confetti at:', x, y);
         const colors = ['#f00', '#0f0', '#00f', '#ff0', '#f0f', '#0ff'];
 
         for (let i = 0; i < 20; i++) {
