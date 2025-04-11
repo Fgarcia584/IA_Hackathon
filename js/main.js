@@ -35,13 +35,33 @@ document.addEventListener('DOMContentLoaded', function () {
     // Données des niveaux
     const levels = [
         {
+            title: "Salle de bain",
+            image: "https://cdn.discordapp.com/attachments/1300375543056961537/1360214366192144616/raw.png?ex=67fa4dd8&is=67f8fc58&hm=71d04933b5460fda51800c2a1d34dbaf4f83af91c9c6b3d158d26e8ca61c5bdd&",
+            targets: [
+                { x: 32, y: 48, name: "Station de brosse à dent", energy: 12, tooltipPos: "right" },
+            ],
+            hint: "Cherchez les sources de consommations electriques"
+        },
+        {
+            title: "Cuisine",
+            image: "https://cdn.discordapp.com/attachments/1300375543056961537/1360218977803964556/Design_sans_titre_2.png?ex=67fa5223&is=67f900a3&hm=8219b50561c1ca82a5d506e8f921472f8c41a286649100916ced0363403703f8&",
+            targets: [
+                { x: 31.5, y: 14, name: "Lumière allumée", energy: 12, tooltipPos: "right" },
+                { x: 49, y: 46, name: "Cuiseur à riz", energy: 20, tooltipPos: "left" },
+                { x: 61.5, y: 47, name: "Robot cuisinier", energy: 5, tooltipPos: "bottom" },
+                { x: 70, y: 22, name: "Micro-ondes", energy: 5, tooltipPos: "bottom" },
+                { x: 75, y: 50, name: "Réfrigirateur", energy: 50, tooltipPos: "left" }
+            ],
+            hint: "Cherchez les sources de consommations electriques"
+        },
+        {
             title: "Chambre",
             image: "https://cdn.discordapp.com/attachments/1300375543056961537/1360218105430806538/Design_sans_titre_1.png?ex=67fa5153&is=67f8ffd3&hm=aa7fe5c0ae9300742ea16d3e4ce3ed02b4eb2f6bef0f2fd8c1b6ad395fbe8fc7&",
             targets: [
                 { x: 56, y: 17, name: "Lumière allumée", energy: 25, tooltipPos: "right" },
                 { x: 84, y: 53, name: "Réveil", energy: 30, tooltipPos: "left" },
             ],
-            hint: "Cherchez les sources de consommations qui sont inutiles"
+            hint: "Cherchez les sources de consommations electriques"
         },
         {
             title: "Salon",
@@ -53,30 +73,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 { x: 51, y: 38, name: "Lampe allumée", energy: 15, tooltipPos: "bottom" },
                 { x: 85, y: 43, name: "Lampe allumée", energy: 10, tooltipPos: "left" }
             ],
-            hint: "Cherchez les sources de consommations qui sont inutiles"
+            hint: "Cherchez les sources de consommations electriques"
         },
-        {
-            title: "Cuisine",
-            image: "TODO",
-            targets: [
-                { x: 40, y: 60, name: "Micro-ondes avec horloge", energy: 12, tooltipPos: "right" },
-                { x: 75, y: 50, name: "Cafetière électrique", energy: 20, tooltipPos: "left" },
-                { x: 20, y: 30, name: "Grille-pain branché", energy: 5, tooltipPos: "bottom" },
-                { x: 60, y: 20, name: "Réfrigérateur mal réglé", energy: 50, tooltipPos: "bottom" }
-            ],
-            hint: "Vérifiez les petits électroménagers et le réfrigérateur"
-        },
-        {
-            title: "Salle de bain",
-            image: "TODO",
-            targets: [
-                { x: 40, y: 60, name: "Micro-ondes avec horloge", energy: 12, tooltipPos: "right" },
-                { x: 75, y: 50, name: "Cafetière électrique", energy: 20, tooltipPos: "left" },
-                { x: 20, y: 30, name: "Grille-pain branché", energy: 5, tooltipPos: "bottom" },
-                { x: 60, y: 20, name: "Réfrigérateur mal réglé", energy: 50, tooltipPos: "bottom" }
-            ],
-            hint: "Vérifiez les petits électroménagers et le réfrigérateur"
-        }
     ];
 
     // Initialisation du jeu
