@@ -127,9 +127,6 @@ document.addEventListener('DOMContentLoaded', function () {
             const x = ((e.clientX - rect.left) / rect.width) * 100;
             const y = ((e.clientY - rect.top) / rect.height) * 100;
 
-            console.log('x', x);
-            console.log('y', y);
-
             // Créer un effet visuel sur le clic
             createClickFeedback(e.pageX, e.pageY);
 
