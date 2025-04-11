@@ -35,14 +35,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const levels = [
         {
             title: "Bureau",
-            image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+            image: "https://cdn.discordapp.com/attachments/1300375543056961537/1360207687756808293/Telecharger_le_fichier_iLoveIMG.png?ex=67fa47a0&is=67f8f620&hm=8fbd42df34c11bd041095022b66a38fd8329112e38a0e87a7d6ce846062e2db7&",
             targets: [
-                { x: 30, y: 70, name: "Ordinateur en veille", energy: 20, tooltipPos: "right" },
-                { x: 75, y: 60, name: "Chargeur de téléphone branché", energy: 5, tooltipPos: "left" },
-                { x: 20, y: 30, name: "Lampe de bureau allumée", energy: 15, tooltipPos: "bottom" },
-                { x: 85, y: 25, name: "Imprimante en veille", energy: 10, tooltipPos: "left" }
+                { x: 13, y: 20, name: "Lampe allumé", energy: 20, tooltipPos: "right" },
+                { x: 80, y: 20, name: "Télévision allumé", energy: 5, tooltipPos: "left" },
+                { x: 78, y: 44, name: "Box internet branchée", energy: 10, tooltipPos: "left" }
             ],
-            hint: "Cherchez près de l'ordinateur, des prises et des appareils électroniques"
+            hint: "Cherchez près de la lampe, et les appareils électroniques"
         },
         {
             title: "Salon",
@@ -216,6 +215,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Créer des confettis
     function createConfetti(x, y) {
+        console.log('Confetti at:', x, y);
         const colors = ['#f00', '#0f0', '#00f', '#ff0', '#f0f', '#0ff'];
         
         for (let i = 0; i < 20; i++) {
