@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded', function () {
             console.log('y', y);
 
             // Créer un effet visuel sur le clic
-            createClickFeedback(e.clientX, e.clientY);
+            createClickFeedback(e.pageX, e.pageY);
 
             // Vérifier si le clic est sur une cible
             const targets = document.querySelectorAll('.energy-consumer');
@@ -153,7 +153,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         totalEnergySaved += parseInt(target.dataset.energy);
                         updateScore();
                         createTooltip(target, target.dataset.name, target.dataset.energy, target.dataset.tooltipPos);
-                        createConfetti(e.clientX, e.clientY);
+                        createConfetti(e.pageX, e.pageY);
 
                         // Mettre à jour la barre de progression
                         const progress = (foundTargets / totalTargets) * 100;
