@@ -43,15 +43,6 @@ document.addEventListener('DOMContentLoaded', function () {
             hint: "Cherchez les sources de consommations electriques"
         },
         {
-            title: "Chambre",
-            image: "https://cdn.discordapp.com/attachments/1300375543056961537/1360218105430806538/Design_sans_titre_1.png?ex=67fa5153&is=67f8ffd3&hm=aa7fe5c0ae9300742ea16d3e4ce3ed02b4eb2f6bef0f2fd8c1b6ad395fbe8fc7&",
-            targets: [
-                { x: 56, y: 17, name: "Lumière allumée", energy: 25, tooltipPos: "right" },
-                { x: 84, y: 53, name: "Réveil", energy: 30, tooltipPos: "left" },
-            ],
-            hint: "Cherchez les sources de consommations electriques"
-        },
-        {
             title: "Cuisine",
             image: "https://cdn.discordapp.com/attachments/1300375543056961537/1360218977803964556/Design_sans_titre_2.png?ex=67fa5223&is=67f900a3&hm=8219b50561c1ca82a5d506e8f921472f8c41a286649100916ced0363403703f8&",
             targets: [
@@ -60,6 +51,15 @@ document.addEventListener('DOMContentLoaded', function () {
                 { x: 61.5, y: 47, name: "Robot cuisinier", energy: 5, tooltipPos: "bottom" },
                 { x: 70, y: 22, name: "Micro-ondes", energy: 5, tooltipPos: "bottom" },
                 { x: 75, y: 50, name: "Réfrigirateur", energy: 50, tooltipPos: "left" }
+            ],
+            hint: "Cherchez les sources de consommations electriques"
+        },
+        {
+            title: "Chambre",
+            image: "https://cdn.discordapp.com/attachments/1300375543056961537/1360218105430806538/Design_sans_titre_1.png?ex=67fa5153&is=67f8ffd3&hm=aa7fe5c0ae9300742ea16d3e4ce3ed02b4eb2f6bef0f2fd8c1b6ad395fbe8fc7&",
+            targets: [
+                { x: 56, y: 17, name: "Lumière allumée", energy: 25, tooltipPos: "right" },
+                { x: 84, y: 53, name: "Réveil", energy: 30, tooltipPos: "left" },
             ],
             hint: "Cherchez les sources de consommations electriques"
         },
@@ -127,8 +127,11 @@ document.addEventListener('DOMContentLoaded', function () {
             const x = ((e.clientX - rect.left) / rect.width) * 100;
             const y = ((e.clientY - rect.top) / rect.height) * 100;
 
+            console.log('x', x);
+            console.log('y', y);
+
             // Créer un effet visuel sur le clic
-            createClickFeedback(e.pageX, e.pageY);
+            createClickFeedback(e.clientX, e.clientY);
 
             // Vérifier si le clic est sur une cible
             const targets = document.querySelectorAll('.energy-consumer');
@@ -150,7 +153,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         totalEnergySaved += parseInt(target.dataset.energy);
                         updateScore();
                         createTooltip(target, target.dataset.name, target.dataset.energy, target.dataset.tooltipPos);
-                        createConfetti(e.pageX, e.pageY);
+                        createConfetti(e.clientX, e.clientY);
 
                         // Mettre à jour la barre de progression
                         const progress = (foundTargets / totalTargets) * 100;
