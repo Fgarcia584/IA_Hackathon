@@ -284,7 +284,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function updateStats() {
         savedEnergy.textContent = totalEnergySaved;
         savedMoney.textContent = Math.round(totalEnergySaved * 0.20); // 0.20€ par kWh
-        savedCo2.textContent = Math.round(totalEnergySaved * 0.024); // 0.024kg CO2 par kWh
+        savedCo2.textContent = Math.round(totalEnergySaved * 0.032); // 0.024kg CO2 par kWh
     }
 
     // Afficher l'écran de félicitations
