@@ -35,27 +35,25 @@ document.addEventListener('DOMContentLoaded', function () {
     // Données des niveaux
     const levels = [
         {
+            title: "Chambre",
+            image: "https://cdn.discordapp.com/attachments/1300375543056961537/1360218105430806538/Design_sans_titre_1.png?ex=67fa5153&is=67f8ffd3&hm=aa7fe5c0ae9300742ea16d3e4ce3ed02b4eb2f6bef0f2fd8c1b6ad395fbe8fc7&",
+            targets: [
+                { x: 56, y: 17, name: "Lumière allumée", energy: 25, tooltipPos: "right" },
+                { x: 84, y: 53, name: "Réveil", energy: 30, tooltipPos: "left" },
+            ],
+            hint: "Cherchez les sources de consommations qui sont inutiles"
+        },
+        {
             title: "Salon",
             image: "https://cdn.discordapp.com/attachments/1300375543056961537/1360206738053140570/raw.png?ex=67fa46bd&is=67f8f53d&hm=8a4a2fd61a86d994ed0b39705c6217e63fee57c80f3154384b803c5af33c448b&",
             targets: [
                 { x: 15, y: 15, name: "Lampe à lave", energy: 20, tooltipPos: "right" },
-                { x: 25, y: 55, name: "Télévision en veille", energy: 20, tooltipPos: "right" },
+                { x: 27, y: 54, name: "Télévision en veille", energy: 20, tooltipPos: "right" },
                 { x: 20, y: 88, name: "Multiprise", energy: 5, tooltipPos: "left" },
                 { x: 51, y: 38, name: "Lampe allumée", energy: 15, tooltipPos: "bottom" },
                 { x: 85, y: 43, name: "Lampe allumée", energy: 10, tooltipPos: "left" }
             ],
-            hint: "Cherchez les sources de consommations qui ne sont pas utilisées"
-        },
-        {
-            title: "Chambre",
-            image: "TODO",
-            targets: [
-                { x: 25, y: 50, name: "Télévision en veille", energy: 25, tooltipPos: "right" },
-                { x: 70, y: 40, name: "Console de jeu en veille", energy: 30, tooltipPos: "left" },
-                { x: 60, y: 80, name: "Box Internet", energy: 15, tooltipPos: "top" },
-                { x: 85, y: 70, name: "Haut-parleur Bluetooth", energy: 8, tooltipPos: "left" }
-            ],
-            hint: "Inspectez la télévision, les consoles et les appareils multimédias"
+            hint: "Cherchez les sources de consommations qui sont inutiles"
         },
         {
             title: "Cuisine",
@@ -100,7 +98,8 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         // Réinitialiser
-        gameImage.removeChild(gameImage.lastChild);
+        gameImage.innerHTML = ''; // Supprimer les anciennes cibles
+        gameImage.appendChild(sceneImage);
         sceneImage.setAttribute('src', levelData.image);
         sceneTitle.textContent = levelData.title;
         levelEl.textContent = level;
@@ -232,6 +231,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Créer des confettis
     function createConfetti(x, y) {
+        console.log('Confetti at:', x, y);
         const colors = ['#f00', '#0f0', '#00f', '#ff0', '#f0f', '#0ff'];
 
         for (let i = 0; i < 20; i++) {
