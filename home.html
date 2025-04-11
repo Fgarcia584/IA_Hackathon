@@ -13,8 +13,9 @@
     <body class="bg-green-50 min-h-screen flex flex-col items-center">
         <header class="w-full bg-green-600 text-white py-4 shadow-lg">
             <div class="container mx-auto px-4 flex justify-between items-center">
-                <h1 class="text-2xl md:text-3xl font-bold">
-                    <i class="fas fa-leaf mr-2"></i> La chasse aux watts fantômes
+                <h1 class="text-2xl md:text-3xl font-bold flex flex-row gap-4 items-center">
+                    <img src="https://cdn.discordapp.com/attachments/1300375543056961537/1360225756990537960/Image_sans_arriere-plan_11_avr_2025.png?ex=67fa5874&is=67f906f4&hm=6f53897409c351b507668d64daa60bb2a4deddf152030f919f39a8094c22bb5b&" alt="logo"
+                        class="w-16 h-16"> La chasse aux watts fantômes
                 </h1>
                 <div class="flex items-center space-x-4">
                     <div class="bg-green-700 px-3 py-1 rounded-full flex items-center">
@@ -22,7 +23,7 @@
                         <span id="score">0</span> / <span id="total-targets">0</span>
                     </div>
                     <button id="help-btn"
-                        class="bg-green-800 hover:bg-green-900 text-white p-2 rounded-full transition">
+                        class="bg-green-800 hover:bg-green-900 text-white p-2 rounded-full h-10 w-10 cursor-pointer transition">
                         <i class="fas fa-question"></i>
                     </button>
                 </div>
@@ -46,7 +47,7 @@
                     <img src="https://cdn.discordapp.com/attachments/1300375543056961537/1360223940089348096/raw.png?ex=67fa56c3&is=67f90543&hm=447aa6f3fd7ff6875f0bb5bb875e20a47f716af8726600c8f4e8054d7cd7f166&" alt=""
                         class="absolute inset-0 w-full h-full object-cover" id="scene-image"
                     >
-                    <div class="absolute inset-0 flex items-center justify-center" id="start-screen">
+                    <div class="absolute inset-0 flex items-center justify-center cursor-default" id="start-screen">
                         <div class="text-center bg-white bg-opacity-90 p-8 rounded-lg shadow-xl max-w-md">
                             <h2 class="text-2xl font-bold text-green-700 mb-4">La chasse aux watts fantômes</h2>
                             <p class="mb-6 text-gray-700">
@@ -56,7 +57,7 @@
                                 découvrir!
                             </p>
                             <button id="start-btn"
-                                class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-full transition-all transform hover:scale-105">
+                                class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-full transition-all transform hover:scale-105 cursor-pointer">
                                 Commencer la chasse <i class="fas fa-play ml-2"></i>
                             </button>
                         </div>
